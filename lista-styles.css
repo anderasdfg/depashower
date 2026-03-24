@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --sage-green: #9CAF88;
+    --sage-green-dark: #8A9D78;
+    --pink-soft: #F4C2D4;
+    --pink-accent: #E8B4C8;
+    --cream: #F5F1E8;
+    --beige: #fbecd6;
+    --pink-pastel: #FFC0CB;
+    --text-dark: #4A4A4A;
+    --text-light: #6B6B6B;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-dark);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #e8e8e8;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/lista.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+.lista-container {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    padding: 2rem;
+}
+
+.lista-subtitle {
+    font-size: 1.1rem;
+    color: #3A6E78;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    margin-top: 7rem;
+    text-align: center;
+}
+
+.lista-items {
+    margin-bottom: 1rem;
+}
+
+.lista-items p {
+    font-size: 0.95rem;
+    color: #3A6E78;
+    line-height: 2.2;
+    margin: 0.5rem 0;
+    font-weight: 400;
+}
+
+.btn-volver {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 0.5rem;
+    background-color: var(--sage-green);
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 200;
+    font-size: 0.55rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.btn-volver:hover {
+    background-color: var(--sage-green-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(156, 175, 136, 0.4);
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+        background-size: cover;
+    }
+
+    .lista-container {
+        padding: 1rem;
+    }
+
+    .lista-items p {
+        font-size: 0.85rem;
+        line-height: 2;
+    }
+}
