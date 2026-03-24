@@ -12,9 +12,18 @@ document.addEventListener('DOMContentLoaded', () => {
     
     let animationStarted = false;
 
-    // Leer parámetro invite de la URL (en base64)
+    // Leer parámetros de la URL
     const urlParams = new URLSearchParams(window.location.search);
     const inviteParam = urlParams.get('invite');
+    const turnoParam = urlParams.get('turno');
+    
+    // Cambiar fecha y hora según el parámetro 'turno'
+    const dateTimeElement = document.querySelector('.datetime-stamp .stamp-text');
+    if (turnoParam === '0') {
+        dateTimeElement.textContent = '29 de Marzo, 2PM';
+    } else if (turnoParam === '1') {
+        dateTimeElement.textContent = '30 de Marzo, 5PM';
+    }
     
     if (inviteParam) {
         try {
