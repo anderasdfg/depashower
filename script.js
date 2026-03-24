@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (turnoParam === '0') {
         dateTimeElement.textContent = '29 de Marzo, 2PM';
     } else if (turnoParam === '1') {
-        dateTimeElement.textContent = '30 de Marzo, 5PM';
+        dateTimeElement.textContent = '07 de Abril, 5PM';
     }
     
     if (inviteParam) {
